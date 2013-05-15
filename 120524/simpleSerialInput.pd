@@ -1,0 +1,69 @@
+#N canvas 489 322 499 460 16;
+#X floatatom 121 133 5 0 0 0 - - -;
+#X msg 164 22 devices;
+#X obj 121 192 t f f f f f f f f;
+#X obj 413 295 & 1;
+#X obj 413 330 == 1;
+#X obj 413 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 358 295 & 2;
+#X obj 358 330 == 2;
+#X obj 358 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 302 295 & 4;
+#X obj 302 331 == 4;
+#X obj 302 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 121 76 comport 2 57600;
+#X msg 315 59 open 2;
+#X msg 315 91 close;
+#X obj 187 295 & 16;
+#X obj 187 333 == 16;
+#X obj 187 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 127 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 127 301 & 32;
+#X obj 127 333 == 32;
+#X obj 67 301 & 64;
+#X obj 67 333 == 64;
+#X obj 248 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 248 295 & 8;
+#X obj 248 331 == 8;
+#X obj 67 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -1 301 & 128;
+#X obj -1 333 == 128;
+#X obj -1 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 99 417 decimal to binary converter;
+#X connect 0 0 2 0;
+#X connect 1 0 12 0;
+#X connect 2 0 27 0;
+#X connect 2 1 21 0;
+#X connect 2 2 19 0;
+#X connect 2 3 15 0;
+#X connect 2 4 24 0;
+#X connect 2 5 9 0;
+#X connect 2 6 6 0;
+#X connect 2 7 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 12 0 0 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 21 0 22 0;
+#X connect 22 0 26 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;

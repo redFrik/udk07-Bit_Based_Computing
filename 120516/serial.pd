@@ -1,0 +1,66 @@
+#N canvas 311 371 731 429 16;
+#X obj 137 105 comport 2 57600;
+#X msg 171 61 devices;
+#X floatatom 148 178 5 0 0 0 - - -;
+#X obj 226 177 print;
+#X obj 35 296 & 1;
+#X obj 35 332 == 1;
+#X obj 32 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 101 296 & 2;
+#X obj 103 330 == 2;
+#X obj 101 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 169 289 & 4;
+#X obj 170 333 == 4;
+#X obj 170 376 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 245 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 242 288 & 8;
+#X obj 243 332 == 8;
+#X obj 300 371 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 368 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 428 376 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 486 378 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 298 287 & 16;
+#X obj 365 288 & 32;
+#X obj 425 289 & 64;
+#X obj 483 291 & 128;
+#X obj 299 331 == 16;
+#X obj 366 332 == 32;
+#X obj 426 333 == 64;
+#X obj 484 335 == 128;
+#X text 313 98 <- maybe change here to 1 or 3;
+#X text 286 62 <- click and check which port is arduino;
+#X connect 0 0 3 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 0 7 0;
+#X connect 2 0 10 0;
+#X connect 2 0 14 0;
+#X connect 2 0 20 0;
+#X connect 2 0 21 0;
+#X connect 2 0 22 0;
+#X connect 2 0 23 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 20 0 24 0;
+#X connect 21 0 25 0;
+#X connect 22 0 26 0;
+#X connect 23 0 27 0;
+#X connect 24 0 16 0;
+#X connect 25 0 17 0;
+#X connect 26 0 18 0;
+#X connect 27 0 19 0;

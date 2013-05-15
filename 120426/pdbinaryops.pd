@@ -1,0 +1,114 @@
+#N canvas 639 107 662 820 10;
+#X obj 113 118 &;
+#X obj 99 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 140 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 116 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 234 134 |;
+#X obj 225 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 266 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 242 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 254 102 t b f;
+#X obj 126 89 t b f;
+#X obj 183 700 &;
+#X msg 167 628 1 0;
+#X floatatom 180 751 5 0 0 0 - - -;
+#X msg 199 628 1 1;
+#X obj 158 311 t f f f f f f f f;
+#X floatatom 157 269 5 0 0 0 - - -;
+#X obj 116 396 & 128;
+#X obj 315 400 & 1;
+#X obj 291 400 & 2;
+#X obj 267 399 & 4;
+#X obj 243 399 & 8;
+#X obj 212 398 & 16;
+#X obj 182 397 & 32;
+#X obj 152 397 & 64;
+#X floatatom 106 435 5 0 0 0 - - -;
+#X floatatom 149 435 5 0 0 0 - - -;
+#X obj 106 470 == 128;
+#X obj 106 501 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 149 500 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 149 469 == 64;
+#X obj 186 500 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 186 469 == 32;
+#X obj 222 501 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 222 470 == 16;
+#X obj 259 501 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 259 470 == 8;
+#X obj 289 500 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 323 500 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 357 499 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 289 469 == 4;
+#X obj 323 469 == 2;
+#X obj 357 468 == 1;
+#X floatatom 186 437 5 0 0 0 - - -;
+#X floatatom 222 435 5 0 0 0 - - -;
+#X floatatom 259 435 5 0 0 0 - - -;
+#X floatatom 289 435 5 0 0 0 - - -;
+#X floatatom 323 435 5 0 0 0 - - -;
+#X floatatom 357 436 5 0 0 0 - - -;
+#X text 99 45 and;
+#X text 227 46 or;
+#X text 200 273 increase slowly from 0 to 255 and notice the pattern
+;
+#X text 152 605 also lists are possible;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 9 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 8 0;
+#X connect 8 0 4 0;
+#X connect 8 1 4 1;
+#X connect 9 0 0 0;
+#X connect 9 1 0 1;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 13 0 10 0;
+#X connect 14 0 16 0;
+#X connect 14 1 23 0;
+#X connect 14 2 22 0;
+#X connect 14 3 21 0;
+#X connect 14 4 20 0;
+#X connect 14 5 19 0;
+#X connect 14 6 18 0;
+#X connect 14 7 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 24 0;
+#X connect 17 0 47 0;
+#X connect 18 0 46 0;
+#X connect 19 0 45 0;
+#X connect 20 0 44 0;
+#X connect 21 0 43 0;
+#X connect 22 0 42 0;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 25 0 29 0;
+#X connect 26 0 27 0;
+#X connect 29 0 28 0;
+#X connect 31 0 30 0;
+#X connect 33 0 32 0;
+#X connect 35 0 34 0;
+#X connect 39 0 36 0;
+#X connect 40 0 37 0;
+#X connect 41 0 38 0;
+#X connect 42 0 31 0;
+#X connect 43 0 33 0;
+#X connect 44 0 35 0;
+#X connect 45 0 39 0;
+#X connect 46 0 40 0;
+#X connect 47 0 41 0;

@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15040\viewh13740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+//repetition: build simple input/output\
+\
+void setup() \{\
+  pinMode(13, OUTPUT);\
+  //pinMode(2, INPUT);     //optional.  pins are INPUT by default\
+  digitalWrite(2, 1);    //activate internal pull-up resistor for pin2\
+\}\
+void loop() \{\
+  digitalWrite(13, 1-digitalRead(2));\
+\}\
+\
+//explain why inverted is needed\
+\
+\
+//bygga receive patch / binary decoder i pd\
+\
+\
+//simple setup, serialport posting values as binary\
+byte aa= 0b00000110;\
+//byte aa= 6;\
+void setup() \{\
+  Serial.begin(9600);\
+\}\
+void loop() \{\
+  Serial.print("bin:");\
+  Serial.print(aa, BIN);\
+  Serial.print(" dec:");\
+  Serial.println(aa, DEC);\
+  delay(1000);\
+\}\
+\
+\
+\
+//counts from 0 to 255 and wrap back to 0.  8bits to a byte.\
+byte aa= 0;\
+void setup() \{\
+  Serial.begin(9600);\
+\}\
+void loop() \{\
+  Serial.print("bin:");\
+  Serial.println(aa, BIN);\
+  aa++;\
+  delay(100);\
+\}\
+\
+\
+//--\
+//test to change byte aa= 0; to int aa= 0; then\
+//counts from 0 to 32767 and then -32768 to -1 and then wraps back to 0.  16bits to an int.\
+\
+\
+//--\
+//test to change byte aa= 0; to unsigned int aa= 0; then\
+//counts from 0 to 65535 and then wraps back to 0.  16bits to an unsigned int - only positive values.\
+\
+\
+//--\
+//counts from 0 to 255 and wrap back to 0.  8bits to a byte.\
+byte aa= 0;\
+void setup() \{\
+  Serial.begin(57600);\
+\}\
+void loop() \{\
+  Serial.write(aa);\
+  aa++;\
+  delay(100);\
+\}\
+\
+\
+//--bad scroll (too simple but might work in some situations)\
+byte pat= 0b10000000;\
+byte cnt= 0;\
+void setup() \{\
+  Serial.begin(57600);\
+\}\
+void loop() \{\
+  Serial.write(pat>>cnt);\
+  cnt= (cnt+1)%8;\
+  delay(500);\
+\}\
+\
+\
+\
+//--scroll right\
+byte pat= 0b10100000;\
+void setup() \{\
+  Serial.begin(57600);\
+\}\
+void loop() \{\
+  byte lsb= pat&1;\
+  pat= pat>>1;\
+  pat= pat | (lsb<<7);\
+  Serial.write(pat);\
+  delay(500);\
+\}\
+\
+//scroll left\
+byte pat= 0b10100000;\
+void setup() \{\
+  Serial.begin(57600);\
+\}\
+void loop() \{\
+  byte msb= pat&128;\
+  pat= pat<<1;\
+  pat= pat | (msb>>7);\
+  Serial.write(pat);\
+  delay(500);\
+\}\
+\
+\
+\
+//--test to touch arduino with hands, values should fluctuate, pins on port b are floating\
+//then activate internal pullups and try again.  now need to wire to ground to activate pin - touching not enough to ground.\
+void setup() \{\
+  Serial.begin(9600);\
+  //PORTB= 0b11111111;  //activate internal pull up resistors on all port b pins\
+\}\
+void loop() \{\
+  Serial.println(PINB, BIN);\
+  delay(100);\
+\}\
+\
+}
