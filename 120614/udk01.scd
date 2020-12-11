@@ -90,4 +90,4 @@ Ndef(\bit8, {|rate= 0.5, bits= 4, freq= 150| Latch.ar((SoundIn.ar*FSinOsc.ar(fre
 Ndef(\bit8).play
 Ndef(\bit8).gui
 
-http://en.wikipedia.org/wiki/7-segment_display
+https://en.wikipedia.org/wiki/7-segment_display

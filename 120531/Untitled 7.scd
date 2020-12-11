@@ -11,7 +11,7 @@ var usr= UserView(win, Rect(0, 0, width, height));
 usr.background= Color.black;
 usr.animate= true;
 usr.drawFunc= {
-	
+
 	Pen.fillColor= Color.white;
 	~number.asBinaryString(~length).do{|char, i|
 		if(char==$1, {

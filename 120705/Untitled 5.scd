@@ -20,13 +20,13 @@ usr.drawFunc= {
 	Pen.width= 1;
 	Pen.font= Font("Times", 30);
 	Pen.translate(width*0.5, height*0.5);
-	
+
 	//--slot
 	Pen.fillColor= Color.blue;
 	slot= Rect(-100, ~position.linlin(0, 1, 300, 100), 200, 200);
 	slotInFlag= ~position==1;
 	Pen.fillRect(slot);
-	
+
 	//--disks
 	pnt= Point(200, 0);	//circle radius
 	if(stopFlag.not, {
@@ -42,7 +42,7 @@ usr.drawFunc= {
 				stopFlag= true;
 				stopIndex= i;
 			}, {
-				
+
 			});
 		});
 		stopFlag= stopFlag and:{slotInFlag};
@@ -52,7 +52,7 @@ usr.drawFunc= {
 			Pen.fillColor= Color.red;
 		});
 		Pen.fillOval(Rect.aboutPoint(pnt, 70, 70));//disk size
-		
+
 		//--label
 		if(stopFlag and:{stopIndex==i}, {
 			Pen.fillColor= Color.black;
@@ -63,3 +63,7 @@ usr.drawFunc= {
 win.front;
 CmdPeriod.doOnce({if(win.isClosed.not, {win.close})});
 )
+
+~position= 0.5
+~position= 0.75
+~speed= 0.1

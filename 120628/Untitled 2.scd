@@ -29,3 +29,9 @@ o= OSCresponder(nil, \masterCounter, {|t, r, m|
 }).add;
 CmdPeriod.doOnce({"graphics stopped".postln; o.remove; w.close});
 )
+
+
+
+NetAddr.localAddr.sendMsg(\masterCounter, 1);
+NetAddr.localAddr.sendMsg(\masterCounter, 10);
+NetAddr.localAddr.sendMsg(\masterCounter, 123);

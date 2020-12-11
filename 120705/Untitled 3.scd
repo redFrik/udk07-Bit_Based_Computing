@@ -9,11 +9,11 @@ usr.drawFunc= {
 	Pen.smoothing= true;
 	Pen.width= 1;
 	Pen.translate(width*0.5, height*0.5);
-	
+
 	//--slot
 	Pen.fillColor= Color.blue;
 	Pen.fillRect(Rect(-100, 100, 200, 180));
-	
+
 	//--disks
 	Pen.fillColor= Color.red;
 	p= Point(200, 0);	//circle radius

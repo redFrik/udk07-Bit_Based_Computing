@@ -27,9 +27,11 @@ usr.drawFunc= {
 		}, {
 			pnt= Point(-1, 0);
 		});
-		Pen.lineTo(pnt*~length*(i+1));
+		pnt= pnt*~length*(i+1);
+		Pen.line(Point(0, 0), pnt);
+		Pen.stroke;
+		Pen.translate(pnt.x, pnt.y);
 	};
-	Pen.stroke;
 };
 win.front;
 )

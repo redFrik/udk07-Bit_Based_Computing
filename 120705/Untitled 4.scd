@@ -11,17 +11,17 @@ usr.drawFunc= {
 	var slot, pnt, rot;
 	var slotInFlag, stopFlag= false;
 	var speed= -0.01;	//speed of rotation (also negative)
-	
+
 	Pen.smoothing= true;
 	Pen.width= 1;
 	Pen.translate(width*0.5, height*0.5);
-	
+
 	//--slot
 	Pen.fillColor= Color.blue;
 	slot= Rect(-100, (sin(usr.frame*0.02)*4).linlin(-1, 1, 100, 300), 200, 180);
 	slotInFlag= slot.top==100;
 	Pen.fillRect(slot);
-	
+
 	//--disks
 	Pen.fillColor= Color.red;
 	pnt= Point(200, 0);	//circle radius
@@ -40,7 +40,7 @@ usr.drawFunc= {
 					stopTime= Main.elapsedTime;
 				});
 			}, {
-				
+
 			});
 		});
 		stopFlag.postln;

@@ -68,6 +68,6 @@ dates
 
 software
 --------
-* [SuperCollider](http://supercollider.sourceforge.net)
-* [PureData](http://puredata.info)
-* [Arduino](http://arduino.cc)
+* [SuperCollider](https://supercollider.github.io)
+* [PureData](https://puredata.info)
+* [Arduino](https://arduino.cc)
